@@ -28,6 +28,7 @@ public class BinarySearch {
         int mid;
 
         while (low <= high) {
+            //better then (high+low)/2 otherwise it may exceed int capacity
             mid = low + (high - low) / 2;
 
             if (key == arr[mid]) {
