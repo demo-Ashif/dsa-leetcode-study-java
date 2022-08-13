@@ -14,14 +14,14 @@ public class SearchRange {
     }
 
     static int[] searchRange(int[] nums, int target) {
-        int[] ans;
+        int[] ans = new int[2];
 
         if (nums.length <= 0) return new int[]{-1, -1};
 
-        int first = binarySearch(nums, target, true);
-        int last = binarySearch(nums, target, false);
-
-        ans = new int[]{first, last};
+        ans[0] = binarySearch(nums, target, true);
+        if (ans[0] != -1) {
+            ans[1] = binarySearch(nums, target, false);
+        }
 
 
         return ans;
