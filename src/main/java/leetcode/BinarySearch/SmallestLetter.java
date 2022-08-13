@@ -20,13 +20,6 @@ public class SmallestLetter {
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-
-//            if (target > letters[mid]) {
-//                start = mid + 1;
-//            } else {
-//                end = mid - 1;
-//            }
-
             if (target < letters[mid]) {
                 end = mid - 1;
             } else {
