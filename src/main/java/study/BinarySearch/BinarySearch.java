@@ -11,7 +11,6 @@ package study.BinarySearch;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        //private static final Logger logger = LogManager.getLogger(Main.class);
         int result = binarySearch(new int[]{5, 9, 17, 23, 25, 45, 59, 63, 71, 74, 78, 88, 99}, 99);
         if(result==-1){
            System.out.println("Not Found!");
@@ -21,22 +20,22 @@ public class BinarySearch {
 
     }
 
-    static int binarySearch(int[] arr, int key) {
+    static int binarySearch(int[] arr, int target) {
         int index = -1;
-        int low = 0;
-        int high = arr.length - 1;
+        int start = 0;
+        int end = arr.length - 1;
         int mid;
 
-        while (low <= high) {
-            //better then (high+low)/2 otherwise it may exceed int capacity
-            mid = low + (high - low) / 2;
+        while (start <= end) {
+            //better then (end+start)/2 otherwise it may exceed int capacity
+            mid = start + (end - start) / 2;
 
-            if (key == arr[mid]) {
+            if (target == arr[mid]) {
                 return mid;
-            } else if (key > arr[mid]) {
-                low = mid + 1;
+            } else if (target > arr[mid]) {
+                start = mid + 1;
             } else {
-                high = mid - 1;
+                end = mid - 1;
             }
         }
 
