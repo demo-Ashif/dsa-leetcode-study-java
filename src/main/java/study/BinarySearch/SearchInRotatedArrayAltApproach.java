@@ -1,17 +1,17 @@
-package leetcode.BinarySearch;
+package study.BinarySearch;
 
 /*
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
  */
 
-public class SearchInRotatedArray {
+public class SearchInRotatedArrayAltApproach {
     public static void main(String[] args) {
-        int result = searchInRotatedArray(new int[]{5, 1, 3}, 5);
+        int result = searchInRotatedArray(new int[]{8,10,12,15,2}, 2);
         System.out.println(result);
-
     }
 
     static int searchInRotatedArray(int[] nums, int target) {
+
         int start = 0;
         int end = nums.length - 1;
 
@@ -40,6 +40,5 @@ public class SearchInRotatedArray {
         }
 
         return -1;
-
     }
 }
