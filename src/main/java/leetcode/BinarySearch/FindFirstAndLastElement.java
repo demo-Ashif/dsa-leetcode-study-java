@@ -6,7 +6,7 @@ package leetcode.BinarySearch;
 
 import java.util.Arrays;
 
-public class SearchRange {
+public class FindFirstAndLastElement {
     public static void main(String[] args) {
         int[] result = searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6);
         System.out.println(Arrays.toString(result));
