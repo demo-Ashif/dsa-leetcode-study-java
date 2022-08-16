@@ -14,7 +14,6 @@ public class SearchIn2DArray {
         int[] ans = search(arr,target); // format of return value {row, col}
 
         System.out.println(Arrays.toString(ans));
-        System.out.println(max(arr));
     }
 
     static int[] search(int[][] arr, int target) {

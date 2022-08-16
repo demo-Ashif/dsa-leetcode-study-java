@@ -27,7 +27,6 @@ public class BinarySearch {
         int mid;
 
         while (start <= end) {
-            //better then (end+start)/2 otherwise it may exceed int capacity
             mid = start + (end - start) / 2;
 
             if (target == arr[mid]) {
