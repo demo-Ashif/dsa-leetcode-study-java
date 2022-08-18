@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class FindPivotIndex {
     public static void main(String[] args) {
-        int result = pivotIndex(new int[]{2,1,-1});
+        int result = pivotIndex(new int[]{2, 1, -1});
         System.out.print(result);
     }
 

@@ -20,24 +20,23 @@ public class BinarySearch {
 
     }
 
-    static int binarySearch(int[] arr, int target) {
-        int index = -1;
+    static int binarySearch(int[] nums, int target) {
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
         int mid;
 
         while (start <= end) {
             mid = start + (end - start) / 2;
 
-            if (target == arr[mid]) {
+            if (target == nums[mid]) {
                 return mid;
-            } else if (target > arr[mid]) {
+            } else if (target > nums[mid]) {
                 start = mid + 1;
             } else {
                 end = mid - 1;
             }
         }
 
-        return index;
+        return -1;
     }
 }
